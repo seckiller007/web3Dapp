@@ -1,0 +1,22 @@
+server:
+  port: 8888
+  apIKey: "a6dc9c34bc0c480e9acf43659fc37b1b"
+  private_key: "c4dfa61306d4fc0934b1556da1165526bc2ebc1b0948ddf1061c20786cc67756"
+mysql:
+  host: 127.0.0.1
+  #  host: 192.168.242.10
+  port: 3306
+  user: root
+  password: 123456
+  #  password: 123456
+  database: web3
+       #eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoidXNlciIsImV4cCI6MTc1NzE2OTM4OH0.CGYQsQ7TdKZ-fVYe25ubbvrqNg7t6L8nLXQRoV-gots
+auth:  #eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlIjoidXNlciIsImV4cCI6MTc1NzIwODQxOH0.d_PqewosnCVV0-BGb4cSVm-qRnOHnywteghzfJanD4o
+  #配置文件中应该存放的是 签名密钥（secret）（如 jwt.secret = "your-secret-key"），而不是具体的 token 字符串
+  # 另一个用户用了上一个用户的token生成了token,所以这里应该用上一个用户的token，个人配置导致，实际上应用一个密钥即可，不应该用token字符串
+  jwt_secret: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoidXNlciIsImV4cCI6MTc1NzE2OTM4OH0.CGYQsQ7TdKZ-fVYe25ubbvrqNg7t6L8nLXQRoV-gots
+  token_expiry: 86400
+
+log:
+  path: ./logs/app.log
+  level: info
