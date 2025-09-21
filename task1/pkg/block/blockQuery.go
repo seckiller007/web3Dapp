@@ -16,7 +16,7 @@ import (
 )
 
 func main() {
-	// 替换为你的Infura Sepolia API URL
+	// 替换为你的Infura Sepolia API URL  注意InitConfig配置时 工作目录设置一致，否则有的启动类etc/config.yaml这个路径会加载不到。
 	config.InitConfig("etc/config.yaml")
 	apIkey := config.GetConfig().Server.APIkey
 	infuraURL := "https://sepolia.infura.io/v3/" + apIkey
